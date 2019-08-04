@@ -1,3 +1,38 @@
-<p>
-  sign-up works!
-</p>
+<div class="row">
+  <div class="col s8 offset-s2">
+    <div class="card">
+      <div class="sm-jumbotron center-align">
+        <h2>Registro de Usuarios</h2>
+      </div>
+      <form #userRegistrationForm="ngForm" class="col s12 white">
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="UserName" #UserName="ngModel" [(ngModel)]="user.UserName">
+            <label>Nombre completo</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="Password" #Password="ngModel" [(ngModel)]="user.Password">
+            <label>Contraseña</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="text" name="Email" #Email="ngModel" [(ngModel)]="user.Email">
+            <label>Correo</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="FirstName" #FirstName="ngModel" [(ngModel)]="user.FirstName">
+            <label>Nombre</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="LastName" #LastName="ngModel" [(ngModel)]="user.LastName">
+            <label>Apellido</label>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
